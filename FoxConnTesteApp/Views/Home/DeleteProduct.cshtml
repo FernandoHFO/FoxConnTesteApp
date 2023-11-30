@@ -1,0 +1,57 @@
+﻿@model FoxConnTesteApp.Models.Produto
+
+@{
+    ViewData["Title"] = "DeleteProduct";
+}
+
+<h2>Excluir Produto</h2>
+
+<h3 class="text-danger">Você tem certeza que deseja excluir esse produto?</h3>
+<div>
+    <hr />
+    <form asp-action="DeleteProduct">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Codigo)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Codigo)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Descricao)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Descricao)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.TipoProduto)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.TipoProduto)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.DataLancamento)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.DataLancamento)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Valor)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Valor)
+            </dd>
+        </dl>
+        <div class="form-group">
+            <input type="submit" value="Excluir" class="btn btn-default" />
+        </div>
+    </form>
+</div>
+<div>
+    <a asp-action="Index">Voltar ao Menu</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

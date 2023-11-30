@@ -1,0 +1,70 @@
+﻿@model IEnumerable<FoxConnTesteApp.Models.Produto>
+
+@{
+    ViewData["Title"] = "Consulta de Produtos";
+}
+
+<h2>Consulta de Produtos</h2>
+<p>
+    <a asp-action="NewProduct">Cadastrar novo Produto</a>
+</p>
+<table class="table table-responsive">
+    <thead>
+        <tr>
+            @*<th>
+            @Html.DisplayNameFor(model => model.Id)
+        </th>*@
+            <th>
+                @Html.DisplayNameFor(model => model.Codigo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Descricao)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TipoProduto)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DataLancamento)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Valor)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                @*<td>
+                        @Html.DisplayFor(modelItem => item.Id)
+                    </td>*@
+                <td>
+                    @Html.DisplayFor(modelItem => item.Codigo)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Descricao)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TipoProduto)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DataLancamento)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Valor)
+                </td>
+
+                <td>
+                    @Html.ActionLink("Edit", "EditProduct", new { codigo = item.Codigo }) |
+                    @Html.ActionLink("Excluir", "DeleteProduct", new { codigo = item.Codigo })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<div>
+    <a asp-action="Index">Voltar para o Menu</a> | 
+    <a asp-action="ClearConsult">Limpar Consulta</a>
+</div>

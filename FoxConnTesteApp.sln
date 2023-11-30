@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28803.156
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FoxConnTesteApp", "FoxConnTesteApp\FoxConnTesteApp.csproj", "{0CAF054E-DFF2-47DE-8E61-8F4FBEB67ACF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0CAF054E-DFF2-47DE-8E61-8F4FBEB67ACF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0CAF054E-DFF2-47DE-8E61-8F4FBEB67ACF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0CAF054E-DFF2-47DE-8E61-8F4FBEB67ACF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0CAF054E-DFF2-47DE-8E61-8F4FBEB67ACF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E217F206-0A94-4ED4-B176-6DAAB6048BB9}
+	EndGlobalSection
+EndGlobal

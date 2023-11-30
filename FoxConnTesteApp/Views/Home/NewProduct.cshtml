@@ -1,0 +1,59 @@
+﻿@model FoxConnTesteApp.Models.Produto
+
+@{
+    ViewData["Title"] = "NewProduct";
+}
+
+<h2>Cadastro de Produto</h2>
+
+<h4>Produto</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="NewProduct">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Codigo" class="control-label"></label>
+                <input asp-for="Codigo" class="form-control" />
+                <span asp-validation-for="Codigo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Descricao" class="control-label"></label>
+                <input asp-for="Descricao" class="form-control" />
+                <span asp-validation-for="Descricao" class="text-danger"></span>
+            </div>
+            @*<div class="form-group">
+            <label asp-for="TipoProduto" class="control-label"></label>
+            <input asp-for="TipoProduto" class="form-control"/>
+            <span asp-validation-for="TipoProduto" class="text-danger"></span>
+            </div>*@
+            <div class="form-group">
+                <label asp-for="TipoProduto" class="controllabel"></label>
+                <select asp-for="TipoProduto"
+                        asp-items="(SelectList)ViewBag.ListTipoProduto"
+                        class="form-control"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="DataLancamento" class="control-label"></label>
+                <input asp-for="DataLancamento" class="form-control" />
+                <span asp-validation-for="DataLancamento" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Valor" class="control-label"></label>
+                <input asp-for="Valor" class="form-control" />
+                <span asp-validation-for="Valor" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Voltar ao Menu</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
