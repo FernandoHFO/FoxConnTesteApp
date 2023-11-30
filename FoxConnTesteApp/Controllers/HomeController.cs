@@ -145,20 +145,6 @@ namespace FoxConnTesteApp.Controllers
                     TempData.Keep("listProductFull");
                 }
 
-                //foreach (Produto item in listProduct)
-                //{
-                //    if (productAlt.Codigo == item.Codigo)
-                //    {
-                //        item.Codigo = productAlt.Codigo;
-                //        item.Descricao = productAlt.Descricao;
-                //        item.TipoProduto = productAlt.TipoProduto;
-                //        item.DataLancamento = productAlt.DataLancamento;
-                //        item.Valor = productAlt.Valor;
-
-                //        break;
-                //    };
-                //}
-
                 listProduct.FirstOrDefault(p => p.Codigo == productAlt.Codigo).Codigo = productAlt.Codigo;
                 listProduct.FirstOrDefault(p => p.Codigo == productAlt.Codigo).Descricao = productAlt.Descricao;
                 listProduct.FirstOrDefault(p => p.Codigo == productAlt.Codigo).DataLancamento = productAlt.DataLancamento;
